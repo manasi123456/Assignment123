@@ -14,7 +14,7 @@ router.get('/movies', function(req, res) {
 router.get('/user-profile/:IndexNumber', function(req, res) {
     
     req.params.IndexNumber
-       let array = ["Matrix", "the shining", "lord of the rings", "bartman begins"]
+       let array = ["Matrix", "the shining", "lord of the rings", "bartman begins" , ]
        //  console.log(array[IndexNumber])
        if(req.params.IndexNumber<array.length){
            for(var i=0; i<req.params.IndexNumber;i++){
@@ -79,6 +79,18 @@ router.get('/user-profile/:IndexNumber', function(req, res) {
       
    })
 
+   
+router.get('/missingNumber', function(req, res){
+    let array = [33,34,35,37,38,39]
+    
+    let n =array.length + 1;
+    let Sum = n*(n+1)/2;
+
+    let sum = 0
+    for (let i = 0; i< array.length; i++){
+        sum = sum + array[i];
+}
+
 
 
 
@@ -96,5 +108,7 @@ router.get('/user-profile/:IndexNumber', function(req, res) {
 
 
 
+
+
 module.exports = router;
-// adding this comment for no reason
+})
