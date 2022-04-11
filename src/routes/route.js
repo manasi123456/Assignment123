@@ -106,7 +106,7 @@ obj.map((x)=>{
   }})
   obj.push(data)
 
-  res.send({  newPlayer : obj })
+  res.send({ newPlayer : obj })
 });
 
 
