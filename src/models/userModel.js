@@ -10,22 +10,23 @@ const userSchema = new mongoose.Schema(
     authorName: String,
     category: String,
     year: Number,
-    // mobile: {
-    //     type: String,
-    //     unique: true,
-    //     required: true
-    // },
-    // gender: {
-    //     type: String,
-    //     enum: ["male", "female", "LGBTQ"] //"falana" will give an error
-    // },
-    // isIndian: Boolean,
-    // parentsInfo: {
-    //     motherName: String,
-    //     fatherName: String,
-    //     siblingName: String
-    // },
-    // cars: [ String  ]
+    mobile: {
+      type: String,
+      unique: true,
+      required: true,
+    },
+    gender: {
+      type: String,
+      enum: ["male", "female", "LGBTQ"], //"falana" will give an error
+    },
+    isIndian: Boolean,
+    parentsInfo: {
+      motherName: String,
+      fatherName: String,
+      siblingName: String,
+    },
+    BookPrice: IndianRupee,
+    cars: [String],
   },
   { timestamps: true }
 );

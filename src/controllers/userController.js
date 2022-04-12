@@ -7,7 +7,8 @@ const createUser= async function (req, res) {
 }
 
 const getUsersData= async function (req, res) {
-    let allUsers= await UserModel.find()
+    let allUsers= await UserModel.find().select({"bookName":1,"authorName":1,_id: 0})
+
     res.send({msg: allUsers})
 }
 
