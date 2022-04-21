@@ -81,7 +81,7 @@ const deleteUser = async function(req,res,next){
   let userId = req.params.userId;
   let user = await userModel.findById(userId);
   if (!user) {
-    return res.send("No such user exists");
+    return res.send("token must be present");
   }
   let updatedUser = await userModel.findOneAndUpdate({ _id: userId }, {isDeleted : true},{new:true, upsert:true});
   res.send({ status: true, data: updatedUser });
